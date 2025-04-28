@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boblioteca ACME</title>
+    <title>Biblioteca ACME - Acervo</title>
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Biblioteca ACME</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Acervo</a></li>
+                <li><a href="locacoes.html">Locações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Acervo de Livros</h2>
+        <div class="livros-container" id="livros-container"></div>
+    </main>
+
+    <div id="modal-detalhes" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <div id="modal-body"></div>
+            <p id="status-alugado"></p>
+            <button id="btn-locar">Locar</button>
+        </div>
+    </div>
+<div class="modal" id="modal-detalhes">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-titulo"></h2>
+        <div class="modal-body">
+            <div class="livro-detalhe">
+                <p><strong>Autor:</strong> <span id="modal-autor"></span></p>
+                <p><strong>Ano:</strong> <span id="modal-ano"></span></p>
+                <p><strong>Editora:</strong> <span id="modal-editora"></span></p>
+                <p><strong>Gênero:</strong> <span id="modal-genero"></span></p>
+                <div class="descricao">
+                    <p><strong>Descrição:</strong></p>
+                    <p id="modal-descricao"></p>
+                </div>
+            </div>
+        </div>
+        <button onclick="abrirModalDetalhes(1)">Ver Detalhes</button>
+    </div>
+</div>
+
+    <script src="../scripts/script.js";
+    <script src="../scripts/locaçoes.js"></script>
 </body>
-<script src="../scripts/home.js"></script>
 </html>

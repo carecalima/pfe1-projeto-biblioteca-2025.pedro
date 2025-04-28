@@ -1,0 +1,40 @@
+
+.table-container {
+    overflow-x: auto;
+    margin: 2rem 0;
+    border: 1px solid rgba(167, 123, 202, 0.3);
+    border-radius: 8px;
+    background-color: rgba(94, 75, 138, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(167, 123, 202, 0.2);
+    color: #F2E6FF;
+}
+
+th {
+    background-color: #5E4B8A;
+    color: #F2E6FF;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background-color: rgba(167, 123, 202, 0.1);
+}
+
+@media (max-width: 480px) {
+    th, td {
+        padding: 0.8rem 0.6rem;
+        font-size: 0.9rem;
+    }
+}

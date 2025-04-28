@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #F9F5FF;
+    background-color: #121212;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #E4C1F9;
+}
+
+
+header {
+    background-color: #5E4B8A;
+    color: #F2E6FF;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #A77BCA;
+    box-shadow: 0 4px 12px rgba(94, 75, 138, 0.3);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: #F2E6FF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+nav ul li a:hover {
+    color: #E4C1F9;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #A77BCA;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+main {
+    padding: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    color: #A77BCA;
+    border-bottom: 1px solid rgba(167, 123, 202, 0.5);
+    padding-bottom: 0.75rem;
+    font-size: 2rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+img{
+    width: 10%;
+    height: 10%;
+}
+
+.modal-content {
+    background-color: #5E4B8A;
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 650px;
+    box-shadow: 0 5px 25px rgba(167, 123, 202, 0.4);
+    border: 1px solid #A77BCA;
+    animation: modalFadeIn 0.4s;
+    color: #F2E6FF;
+    /* Centraliza vertical e horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    color: #F2E6FF;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #E4C1F9;
+}
+
+.modal-body {
+    margin: 1.5rem 0;
+    line-height: 1.7;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+.modal-body strong {
+    color: #E4C1F9;
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    color: #E4C1F9;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(167, 123, 202, 0.1);
+    border: 1px solid #A77BCA;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #F9F5FF;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #E4C1F9;
+    background-color: rgba(228, 193, 249, 0.2);
+}
+
+/* Botões */
+.btn-detalhes, .btn-voltar {
+    display: inline-block;
+    background: transparent;
+    color: #A77BCA;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #A77BCA;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-detalhes:hover, .btn-voltar:hover {
+    background: rgba(167, 123, 202, 0.2);
+    color: #E4C1F9;
+    border-color: #E4C1F9;
+}
+
+.btn-locar, .btn-submit {
+    background: linear-gradient(to right, #A77BCA, #E4C1F9);
+    color: #5E4B8A;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-locar:hover, .btn-submit:hover {
+    background: linear-gradient(to right, #E4C1F9, #A77BCA);
+    box-shadow: 0 4px 12px rgba(167, 123, 202, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+    }
+    
+    .modal-content {
+        width: 90%;
+        padding: 1.8rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+}

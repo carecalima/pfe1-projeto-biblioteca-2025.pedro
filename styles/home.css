@@ -1,0 +1,65 @@
+
+.livros-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.livro-card {
+    background: rgba(94, 75, 138, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(94, 75, 138, 0.3);
+    border: 1px solid rgba(167, 123, 202, 0.3);
+}
+
+.livro-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(167, 123, 202, 0.3);
+    border-color: #E4C1F9;
+}
+
+.livro-imagem {
+    height: 220px;
+    background: linear-gradient(135deg, #5E4B8A 0%, #A77BCA 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #F2E6FF;
+    border-bottom: 1px solid rgba(228, 193, 249, 0.3);
+}
+
+.livro-info {
+    padding: 1.5rem;
+}
+
+.livro-info h3 {
+    margin-bottom: 0.75rem;
+    color: #E4C1F9;
+    font-size: 1.4rem;
+}
+
+.livro-info p {
+    color: #F2E6FF;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.livro-info p strong {
+    color: #A77BCA;
+}
+
+@media (max-width: 1024px) {
+    .livros-container {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .livros-container {
+        grid-template-columns: 1fr;
+    }
+}
